@@ -1,4 +1,3 @@
-const student = require("../../models/Student");
 const Student = require("../../models/Student");
 class StudentService{
     async create(payload){

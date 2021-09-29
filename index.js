@@ -14,11 +14,6 @@ app.use(cookieParser());
 app.use(cors());
 
 
-
-// app.get('/',(req,res)=>{
-//     res.send('hello from pitch please')
-// });
-
 app.use('/',router)
 
 app.listen(PORT,()=>{

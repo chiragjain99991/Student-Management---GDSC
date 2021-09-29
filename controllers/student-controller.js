@@ -1,4 +1,3 @@
-const Student = require("../models/Student")
 const StudentService = require("./services/student-service")
 class StudentControler{
 
