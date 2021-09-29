@@ -76,7 +76,7 @@ class StudentControler{
         studentId = String(studentId)
         try{      
 
-                // If id from params is not same as id from request of body and if user is trying to change the id to the one which is already present in the system
+                // To check if id from params is not same as id from request of body and if user is trying to change the id to the one which is already present in the system
                 if(String(studentId) !== String(id)){
                     const student = await Student.findOne({ id });
                     if(student){
@@ -88,7 +88,7 @@ class StudentControler{
 
                 //If id from params is same as id from request of body or if user is trying to change the id to the one which is not present in the system 
                 // so as to maintain the uniqueness of id 
-                
+
                 const student = await StudentService.update({studentId, name, division, id, year});
                 if(student){
                     return res.status(200).json({msg:"user updated successfully", student})
