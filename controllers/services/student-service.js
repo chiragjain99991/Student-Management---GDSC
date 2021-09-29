@@ -27,7 +27,7 @@ class StudentService{
     }
     async allStudentsByDiv(payload){
         const { division } = payload
-        const students = Student.find({division});
+        const students = Student.find({ division });
         return students;
     }
 }

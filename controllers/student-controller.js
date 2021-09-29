@@ -14,12 +14,13 @@ class StudentControler{
                 return res.status(400).json({msg:`User with id ${id} already exists`})
             }else{
                 student = await StudentService.create({name, division, id, year})
+                return res.status(200).json(student)
             }
             
         }catch(err){
-            console.log(err)
+            return res.status(500).send({error:err.message})
         }     
-        return res.status(200).json(student)
+        
     } 
 
     async findStudentById(req, res){
