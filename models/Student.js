@@ -9,8 +9,7 @@ const studentSchema = new mongoose.Schema(
     {
         name: { 
             type: String, 
-            required: true,
-            default:"" 
+            required: true
         },
         division: { 
             type: String, 
@@ -19,8 +18,7 @@ const studentSchema = new mongoose.Schema(
         },
         id: { 
             type: Number, 
-            required: true ,
-            default:"" 
+            required: true 
         },
         year: { 
             type: String, 
