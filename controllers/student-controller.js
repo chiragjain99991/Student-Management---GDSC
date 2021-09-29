@@ -25,7 +25,7 @@ class StudentControler{
     async findStudentById(req, res){
         const { studentId } = req.params;
         if(!studentId){
-            return res.status(400).send({ msg:"id is equired"})
+            return res.status(400).send({ msg:"id is required"})
         }
         const id = String(studentId)
         try{
